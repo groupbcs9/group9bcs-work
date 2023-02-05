@@ -1,0 +1,308 @@
+
+
+:root{
+  
+  --white-color: #ffffff;
+  --white-color-2: #f1f1f1;
+  --black-color: #000000;
+}
+
+:root{
+  --red-color: #FF0000;
+/*--oxblood-color: #8b1310;*/
+  --light-red: #fad7d7;
+  --white-color: #ffffff;
+  --black-color: #333333;
+  --total-black: #000000;
+  --maroon-color: #800000;
+  --main-color-1: #540705;
+  --main-color-2: #fd990c;
+}
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial;
+    /*padding: 0px;*/
+    background: var(--white-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    color: var(--main-color-2);
+    font-size: 32px;
+}
+
+.btn-1{
+	background: var(--main-color-2);
+	color: var(--white-color);
+	padding: 10px;
+	font-size: 24px;
+	font-weight: 400;
+	border: 2px solid var(--main-color-2);
+	border-radius: 10px;
+	margin-top: 27px;
+	transition: all .3s ease;
+}
+
+.btn-1:hover{
+	background: var(--white-color);
+	color: var(--main-color-2);
+	border: 2px solid var(--main-color-1);
+}
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+  
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    /*text-align: center;*/
+    background: var(--main-color-1);
+    width: 100%;
+}
+
+/* The sidepanel menu */
+.sidepanel {
+  height: 100%; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: var(--main-color-1);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--white-color);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: var(--main-color-2);
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--main-color-2);
+  color: var(--white-color);
+  padding: 10px 15px;
+  border: 2px solid var(--main-color-2);
+  float: right;
+  transition: 0.5s;
+}
+
+.openbtn:hover {
+  background-color: transparent;
+  border: 2px solid var(--main-color-2);
+}
+  
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+  
+/* Right column */
+.rightcolumn {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+    align-self: flex-start;
+}
+
+.small-row{
+  display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.small-row .fakeimg, .small-row .content{
+  width: 45%;
+}
+  
+/* Fake image */
+.fakeimg {
+    padding: 0px;
+}
+
+.fakeimg img{
+  width: 90%;
+}
+
+.small-row .content p{
+  color: var(--total-black);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+  
+/* Add a card effect for articles */
+.card {
+    background-color: #f4f4f4;
+    padding: 5px;
+    margin-top: 20px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Footer */
+.footer {
+  margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    background: var(--main-color-1);
+    color: var(--white-color);
+}
+
+.footer .social-footer{
+  text-align: center;
+  border-bottom: 2px solid var(--main-color-2);
+}
+
+.footer .social-footer li {
+  height: 60px;
+  width: 60px;
+  background: var(--main-color-2);
+  border-radius: 50%;
+  padding: 15px;
+  display: inline-block;
+  border: 2px solid var(--main-color-2);
+  text-align: center;
+  margin-left: 70px;
+  margin-right: 100px;
+}
+
+.footer .social-footer li span{
+  font-size: 28px;
+  text-align: center;
+}
+
+.footer h2{
+  color: var(--white-color-2);
+}
+
+.footer a{
+  color: var(--white-color);
+  font-size: 16px;
+}
+
+
+footer .row{
+  width: 100%;
+}
+
+footer .column{
+  width: 22%;
+  display: inline-block;
+
+}
+
+.footer .new-posts ul li{
+  display: inline-block;
+}
+  
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+}
+
+.example{
+  background: #000;
+}
+
+.example .row{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.example .column{
+  width: 30px;
+}

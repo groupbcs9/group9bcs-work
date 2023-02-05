@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon Page</title>
+    <link rel="stylesheet" href="css/all.css">
+    <style>   
+    *{
+    box-sizing: border-box;
+}
+html{
+    background-color: #f3f3f3;
+}
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background:transparent;
+
+height: 100%;
+}
+
+.coming #myVideo {
+    position: relative;
+    /*right: 0;
+    bottom: 0;*/
+    width: 100%; 
+    height: 100%;
+}
+
+.about-us .comin{
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 75px;
+    right: 0;
+    left: 0;
+}
+ 
+
+.container{
+    position: absolute;
+    height: 480px;
+    width:60%;
+    background: rgba(0, 0, 0, 0.5);
+    /*background-color: #202124;*/
+    color:#000;
+    margin:100px auto;
+    padding:60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: 0;
+    left: 25%;
+}
+
+.container , h1,h2{
+text-align: center;
+}
+.container> h1{
+ color: #FF0000;
+}
+.container> h2{
+    color:#fff;
+}
+.count{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.countso{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.countso .fa-instagram, .countso .fa-twitter, .fa-facebook, .fa-envelope{
+    background-color:  #FF0000;
+    height:50px;
+    width:50px;
+    padding:10px;
+    border-radius:12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.countd{
+    margin-left: 10px;
+    color:#fff;
+    border:2px solid  #FF0000;
+    padding:10px;
+    border-radius: 10px;
+    width:200px
+}
+
+@media only screen and (max-width: 900px) {
+    .container{
+        margin:75px auto;
+        width:90%
+    }
+    .count{
+        font-size: 20px;
+    }
+    .countso{
+        font-size: 20px;
+       
+    }
+    .countso > i{
+        height:40px;
+        width:40px; 
+    }
+  }
+
+  .credit{
+
+margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.credit a{
+    text-decoration: none;
+    color: #FF0000;
+    font-weight: bold;
+}
+    </style>
+
+</head>
+<body>
+        <div class="coming">
+            <video autoplay muted loop id="myVideo">
+                <source src="video/about-bg.mp4" type="video/mp4">
+            </video>
+            <div class="container">
+                <img src="images/logo-1,1.png" alt="" width="150px">
+            <h2>We Are Coming Soon.</h2>
+            <div class="count">
+                <div class="countd">
+                    <span id="days">00</span><br>
+                    days
+                </div>
+                <div class="countd">
+                    <span id="hours">00</span><br>
+                    hours
+                </div>
+                <div class="countd">
+                    <span id="mins">00</span><br>
+                    minutes
+                </div>
+                <div class="countd">
+                    <span id="secs">00</span><br>
+                    seconds
+                </div>
+            </div>
+            <div class="countso">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fa fa-envelope"></i>
+            </div>
+            </div>
+        </div>
+</body>
+<script src="js/all.js"></script>
+<script>
+    var count = new Date("january 7,2023 00:00:00").getTime();
+    var x = setInterval( function() {
+	var now = new Date().getTime();
+	var d = count - now;
+	var days = Math.floor(d/(1000*60*60*24));
+	var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+	var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+	var seconds = Math.floor((d%(1000*60))/1000);
+	document.getElementById("days").innerHTML = days;
+	document.getElementById("hours").innerHTML = hours;
+	document.getElementById("mins").innerHTML = minutes;
+	document.getElementById("secs").innerHTML = seconds;
+},1000);
+</script>
+</html>
+
